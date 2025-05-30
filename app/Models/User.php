@@ -42,7 +42,19 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
+            'last_seen' => 'datetime',
             'password' => 'hashed',
         ];
     }
+    public function groups()
+    {
+        return $this->belongsToMany(Group::class);
+    }
+
+    public function getOnlineAttribute()
+    {
+        return $this->last_seen && $this->last_seen->gt(now()->subSeconds(30));
+    }
+
+
 }

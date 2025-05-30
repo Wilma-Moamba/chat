@@ -1,15 +1,7 @@
-// import axios from 'axios';
-// window.axios = axios;
-
-// window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 import Echo from 'laravel-echo';
-window.Pusher = require('pusher-js');
+window.io = require('socket.io-client');
 
 window.Echo = new Echo({
-    broadcaster: 'pusher',
-    key: 'local',
-    wsHost: window.location.hostname,
-    wsPort: 6001,
-    forceTLS: false,
-    disableStats: true,
+    broadcaster: 'socket.io',
+    host: window.location.hostname + ':6001', // ajuste a porta se necessário
 });
