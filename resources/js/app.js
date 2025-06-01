@@ -1,5 +1,7 @@
 import Echo from 'laravel-echo';
 import { io } from 'socket.io-client';
+import '../css/app.css';
+
 
 window.io = io;
 
