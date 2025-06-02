@@ -27,6 +27,8 @@ class ChatController extends Controller
 
      public function sendMessage(Request $request)
     {
+        dd(auth()->id());
+
         $validated = $request->validate([
             'receiver_id' => 'nullable|exists:users,id',
             'group_id' => 'nullable|exists:groups,id',
