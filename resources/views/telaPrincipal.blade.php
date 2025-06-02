@@ -40,16 +40,16 @@
                     onclick="event.stopPropagation(); abrirImagemModal('{{ $user->profile_picture ? asset('storage/' . $user->profile_picture) : asset('default.png') }}')">
 
                     <span>{{ $user->name }}</span>
-                    <!-- @if($user->online)
+                    @if($user->online)
                         <span class="ml-auto w-2 h-2 bg-green-500 rounded-full"></span>
-                    @endif -->
+                    @endif
 
                       
-                   @if($user->online)
+                   <!-- @if($user->online)
                         <span class="ml-auto w-2 h-2 bg-green-500 rounded-full"></span>
                     @else
                         <span class="ml-auto w-2 h-2 bg-red-500 rounded-full"></span>
-                    @endif
+                    @endif -->
 
 
                 </li>
