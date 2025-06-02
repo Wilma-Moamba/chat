@@ -35,6 +35,7 @@ function enviarMensagem() {
     });
 }
 
+
 // Selecionar conversa com usuário
 function selecionarUsuario(id, nome) {
     limparSelecao();

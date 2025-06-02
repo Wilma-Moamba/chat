@@ -141,7 +141,7 @@
 
 <script>
     const userId = {{ Auth::id() }};
-    const routeChatSend = "{{ route('chat.send') }}";
+    const routeChatSend = '/chat/send';
     const csrfToken = "{{ csrf_token() }}";
 </script>
 
