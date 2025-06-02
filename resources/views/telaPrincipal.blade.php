@@ -145,7 +145,9 @@
     const csrfToken = "{{ csrf_token() }}";
 </script>
 
-<!-- <script src="/js/chat.js"></script> -->
+<script>
+    const chatStoreUrl = "{{ route('chat.store') }}";
+</script>
 <script src="{{ asset('js/chat.js') }}"></script> 
     
 @endsection
